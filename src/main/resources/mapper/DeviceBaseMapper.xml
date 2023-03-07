@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.fairyspace.springbootdemo.mapper.DeviceBaseMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="io.github.fairyspace.springbootdemo.entity.DeviceBase">
+                <result column="id" property="id" />
+                <result column="create_time" property="createTime" />
+                <result column="creator" property="creator" />
+                <result column="modifier" property="modifier" />
+                <result column="update_time" property="updateTime" />
+                    <result column="hostname" property="hostname" />
+                    <result column="password" property="password" />
+                    <result column="username" property="username" />
+                    <result column="firmware_version" property="firmwareVersion" />
+                    <result column="hardware_id" property="hardwareId" />
+                    <result column="manufacturer" property="manufacturer" />
+                    <result column="model" property="model" />
+                    <result column="serial_number" property="serialNumber" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+                id,
+                create_time,
+                creator,
+                modifier,
+                update_time,
+            hostname, password, username, firmware_version, hardware_id, manufacturer, model, serial_number
+        </sql>
+
+</mapper>
